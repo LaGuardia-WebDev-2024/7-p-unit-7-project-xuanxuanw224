@@ -1,17 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap');
 
 body {
-  background-color: rgb(37, 150, 190);
+  background-color: rgb(146, 132, 92);
   text-align: center;
-  color: rgb(224, 244, 247);
+  color: rgb(211, 189, 159);
 }
 
 #myCanvas {
-  background-image: url("https://img.freepik.com/premium-photo/park-cartoon-image-background-copy-space_1169880-286389.jpg?semt=ais_hybrid&w=740&q=80");
+  background-image: url("https://i.pinimg.com/originals/c3/ea/c8/c3eac864a918da1d03decfeb27007bb5.gif");
   background-size: 600px 400px;
   border-radius: 10px;
   background-position: center;
-  border: 4px solid rgb(224, 244, 247);;
+  border: 4px solid rgb(211, 189, 159);;
 }
 
 h1{

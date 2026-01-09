@@ -11,7 +11,12 @@ draw = function(){
  
   background(255,255,255,0);
   
+var cat = 200
 
+fill (0,0,0)
+ellipse (cat,cat,100,100);
+triangle (240,100, 220,160, 170,160);
+ellipse (cat-27,cat+16,60,60);
 
 
 
