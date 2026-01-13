@@ -1,29 +1,48 @@
 //🟢Setup Procedure - Runs Once to Set The Canvas
 void setup() {
     size(600, 400); 
+    frameRate (24)
 }
 
 //🎯Variable Declarations Go Here
-
+var cat = 700
+var catY = 200
 
 //🟢Draw Procedure - Runs on Repeat
 draw = function(){
  
   background(255,255,255,0);
   
-var cat = 200
-
+//body
 fill (0,0,0)
-ellipse (cat,cat,100,100);
-triangle (240,100, 220,160, 170,160);
-ellipse (cat-27,cat+16,60,60);
+ellipse (cat+16,catY+150, 100,210)
 
+//head
+fill (0,0,0)
+ellipse (cat,catY,100,100);
+triangle (cat+10,catY-80, cat+20,catY-40, cat-30,catY-40);
+ellipse (cat-27, catY+16,60,60);
 
+//eye
+fill (280,225,0)
+triangle (cat-30,catY+10, cat-5,catY-6, cat-35,catY-6);
+
+fill (360,360,360,90)
+ellipse (cat,catY+200,180,560)
+
+cat = cat - 4;
+catY = catY + 1;
 
 
   //Show x y values when mousepressed
   if(mousePressed){showXYPositions();}
 
+if (cat < -150) {
+  cat = 800
+}
+if (catY < 250) {
+  catY = 150
+}
 }
 
 //🟡Extra FUN Features Ms. Hall Added
