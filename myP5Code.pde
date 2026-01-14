@@ -5,15 +5,17 @@ void setup() {
 }
 
 //🎯Variable Declarations Go Here
-var cat = 700
+var cat = 800
 var catY = 200
+lightSize = 200
 
 //🟢Draw Procedure - Runs on Repeat
 draw = function(){
  
   background(255,255,255,0);
-  
+
 //body
+stroke (0.5)
 fill (0,0,0)
 ellipse (cat+16,catY+150, 100,210)
 
@@ -25,12 +27,31 @@ ellipse (cat-27, catY+16,60,60);
 
 //eye
 fill (280,225,0)
-triangle (cat-30,catY+10, cat-5,catY-6, cat-35,catY-6);
+triangle (cat-30,catY+15, cat-5,catY-6, cat-35,catY-6);
 
+//whiskers
+fill (0,0,360)
+  stroke('magenta');
+  strokeWeight(3);
+
+line (cat-25,catY+20,cat+10,catY+5)
+line (cat-25,catY+30,cat+13,catY+25)
+
+//ghosty
 fill (360,360,360,90)
 ellipse (cat,catY+200,180,560)
 
-cat = cat - 4;
+//light 
+fill (0,0,0,90)
+rect (0,0,1000,700)
+ stroke(280,225,0,0);
+strokeWeight (1);
+fill (280,225,0,30)
+filter(blur, 50)
+
+ellipse (200,200,200,200)
+
+cat = cat - 5;
 catY = catY + 1;
 
 
@@ -40,9 +61,11 @@ catY = catY + 1;
 if (cat < -150) {
   cat = 800
 }
-if (catY < 250) {
-  catY = 150
+if (catY > 170) {
+  catY = 140
 }
+
+
 }
 
 //🟡Extra FUN Features Ms. Hall Added
