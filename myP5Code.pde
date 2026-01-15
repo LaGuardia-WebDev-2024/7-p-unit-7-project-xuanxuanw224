@@ -8,6 +8,8 @@ void setup() {
 var cat = 800
 var catY = 200
 lightSize = 200
+var x = 200
+var y = 200
 
 //🟢Draw Procedure - Runs on Repeat
 draw = function(){
@@ -49,11 +51,13 @@ strokeWeight (1);
 fill (280,225,0,30)
 filter(blur, 50)
 
-ellipse (200,200,200,200)
+ellipse (x,y,200,200)
 
 cat = cat - 5;
 catY = catY + 1;
 
+x=mouseX;
+y=mouseY;
 
   //Show x y values when mousepressed
   if(mousePressed){showXYPositions();}
